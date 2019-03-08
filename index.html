@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <h1 id="test">Trivia Game</h1>
+            </div>
+        </div>
+
+        <!-- 
+            need to make the hoverovers work
+            need to get bootstrap to line up correctly 
+            need to make it look any good
+            maybe add landing page
+        -->
+
+        <div class="row">
+            <div class="offset-lg-2"></div>
+            <div class="col-lg-8 btn-holder">
+                <button type="button" id="start" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                <div id="timer"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-2"></div>
+            <div class="col-lg">
+                <div class="question-holder"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-lg-2"></div>
+            <div class="col-lg-8 answers">
+                <div class="row">
+                    <div class="answer-btn" id="answer-0" value="0"></div>
+                </div>
+                <div class="row">
+                    <div class="answer-btn" id="answer-1" value="1"></div>
+                </div>
+                <div class="row">
+                    <div class="answer-btn" id="answer-2" value="2"></div>
+                </div>
+                <div class="row">
+                    <div class="answer-btn" id="answer-3" value="3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
