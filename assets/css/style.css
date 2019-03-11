@@ -1,4 +1,10 @@
-#test   {
+body{
+    background-color: aliceblue;
+    background-image: url("images/food.png");
+    width: 93vw;
+}
+
+#test {
     padding-left: 1.5%;
 }
 
@@ -47,10 +53,32 @@ p {
 }
 
 .container {
-    background-color: bisque;
+    border-radius: 25px;
+    border: 2px solid darkgrey;
+    background-color: whitesmoke;
     margin-bottom: 20px;
     width: 900px;
-    height: 93vh;
+    height: 90vh;
     position: relative;
+    background-image: url("images/squairy.png");
 
 }
+
+#answer-0,
+#answer-1,
+#answer-2,
+#answer-3 {
+    cursor: pointer;
+
+
+}
+
+#answer-0:hover,
+#answer-1:hover,
+#answer-2:hover,
+#answer-3:hover {
+    /* color: yellow; */
+    text-shadow: 2px 2px 5px darkgrey;
+    text-decoration: underline;
+    transition: 0.4s;
+  }

@@ -69,7 +69,7 @@ function countDown() {
     if (time > 0) {
         time--;
         $("#timer").html("<h2>Time remaining: " + time + "<h2>");
-        
+
     } else {
 
         timerOn = false;
@@ -79,7 +79,7 @@ function countDown() {
         $("#answer-2").text(" ");
         $("#answer-3").text(" ");
         if (answered === false) {
-        $(".question-holder").html("<p id='center'><strong>The answer was: " + answerHolder[0] + ".</strong></p>");
+            $(".question-holder").html("<p id='center'><strong>The answer was: " + answerHolder[0] + ".</strong></p>");
             var k = Math.floor(Math.random() * 3);
             $("#gif-spot").append("<img class='gif' src='" + timesUpGIFs[k] + "'>");
         }
@@ -103,19 +103,25 @@ function countDown() {
         if (j === 10) {
 
             setTimeout(function () {
-                                
-                $(".question-holder").html("<p id='end'><strong>You got " + ((correctAnswers / 10) * 100) + "% correct.</strong></p>");
-                $("#gif-spot").empty();
-                end()
-                if ((correctAnswers / 10) > .8) {
-                $("#gif-spot").append("<img class='gif' src='" + endGIFs[1] + "'>");
-            } else if ((correctAnswers / 10) > .6) {
-                $("#gif-spot").append("<img class='gif' src='" + endGIFs[0] + "'>");
-            } else  {
-                $("#gif-spot").append("<img class='gif' src='" + endGIFs[2] + "'>");
-            }
 
-            }, 9000);
+                $(".question-holder").html("<p id='end'><strong>You got " + ((correctAnswers / 10) * 100) + "% correct. Click button to play again.</strong></p>");
+                $("#gif-spot").empty();
+                if ((correctAnswers / 10) > .8) {
+                    $("#gif-spot").append("<img class='gif' src='" + endGIFs[1] + "'>");
+                } else if ((correctAnswers / 10) > .6) {
+                    $("#gif-spot").append("<img class='gif' src='" + endGIFs[0] + "'>");
+                } else {
+                    $("#gif-spot").append("<img class='gif' src='" + endGIFs[2] + "'>");
+                }
+                j = 0;
+                l = 0;
+                correctAnswers = 0;
+                answered = false;
+                answerHolder = [];
+                timerOn = false;
+                $(".btn-holder").toggle("slide");
+                time = 30;
+            }, 6000);
         }
     }
 }
@@ -140,34 +146,26 @@ function questions() {
 
 $("#start").click(function () {
 
-    $(".btn-holder").empty();
+    // $(".btn-holder").empty();
     $("#timer").html("<h2>Time remaining: " + time + "<h2>");
     j++;
     time = 30;
+    $("#gif-spot").empty();
+    setTimeout(function () {
+        $(".btn-holder").toggle("slide");
+    }, 10)
 
-        for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 4; i++) {
 
-            answerHolder.push(questionsObj.answers[0][i]);
-        }
+        answerHolder.push(questionsObj.answers[0][i]);
+    }
 
-        questions();
+    questions();
 
 });
 
-function end() {
-
-    j = 0;
-    l = 0;
-    correctAnswers = 0; 
-    answered = false;
-    answerHolder = [];
-    timerOn = false;
-    $(".btn-holder").html('<button type="button" id="restart" class="btn btn-primary btn-lg">Start Game!</button>')
-    console.log(j, l, answerHolder)
-}
-
 $("restart").on("click", function () {
-    
+
     gameover = true
     alert("test")
     clearInterval(intervalId);
@@ -176,12 +174,12 @@ $("restart").on("click", function () {
     $("#timer").html("<h2>Time remaining: " + time + "<h2>");
     j++;
     time = 30;
-        for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 4; i++) {
 
-            answerHolder.push(questionsObj.answers[0][i]);
-        }
+        answerHolder.push(questionsObj.answers[0][i]);
+    }
 
-        questions();
+    questions();
 
 });
 
@@ -224,6 +222,3 @@ $(".answer-btn").click(function () {
 });
 
 
-// need to add end message and to give score
-// need to make the button disappear when the game is started
-//
