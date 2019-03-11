@@ -1,14 +1,56 @@
+#test   {
+    padding-left: 1.5%;
+}
 
-
-
-
-
-
-h1  {
+#center {
     text-align: center;
 }
 
+.gif {
 
-.container  {
+    margin: 0 260px;
+    width: 380px;
+    height: auto;
+}
+
+.btn-holder {
+
+    position: relative;
+    left: 370px;
+
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0 15px;
+}
+
+p {
+    font-size: 20px
+}
+
+.question-holder {
+    padding: 0 60px;
+}
+
+.answer-btn {
+    padding: 0 75px;
+}
+
+#end {
+    text-align: center;
+    font-size: 18px;
+}
+
+.container {
     background-color: bisque;
+    margin-bottom: 20px;
+    width: 900px;
+    height: 93vh;
+    position: relative;
+
 }
