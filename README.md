@@ -1,5 +1,42 @@
 # TriviaGame
 
+###Introduction
+
+THe intent of this homework was to help build skills using timers in JS. Beyond that it is also good JS and JQueruy practice in general. The aim of the homework was to make a trivia game. The trivia was supposed to be themed however I didn't like any of my theme ideas so I decided to just make it difficult. To aid in this I found a multiple choice trivia API to give me the questions. The API is found at https://opentdb.com/api_config.php. The player answers one question at a time, they are given 30 seconds per question and at the end they are given a score and an ending gif corresponding to said score.
+
+###Technologies
+
+Bootstrap 4, JQuery, Open Trivia DB API, Love  <3
+
+####Setup
+
+Press start then click directly on the answers to pick an answer. Press start again to play again.
+
+###Features
+
+-Difficult questions from various categories
+
+-The gruelling decision of guessing the correct answer to a question you won't know the answer to
+
+-Sassy gifs for correct and incorrect answers as well as an ending gif determined by your score and for running out of time
+
+-The self satisfaction of (hopefully) answering some of the difficult questions correctly
+
+####Features I'd like to add
+
+-Incorporating an ajax call to pull new questions every time you play
+
+-Difficulty settings
+
+-The ability to pick categoies
+
+-More sassy gifs
+
+
+#####Assignment instructions below
+
+
+
 # JavaScript Assignment 2
 
 ### Overview
